@@ -1,6 +1,6 @@
 import { config } from 'dotenv';
-import { resolve, dirname } from 'path';
-import { fileURLToPath } from 'url';
+import { resolve, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
 config({ path: resolve(dirname(fileURLToPath(import.meta.url)), '../../../.env') });
 import { createServer } from 'http';
 import { WebSocketServer } from 'ws';

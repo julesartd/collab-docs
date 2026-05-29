@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import multer from 'multer';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import prisma from '../db.js';
 import { requireAuth } from '../middleware/auth.js';
 
