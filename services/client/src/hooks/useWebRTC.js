@@ -132,11 +132,11 @@ export function useWebRTC(send, on, documentId) {
     setIsMuted(m => !m);
   }, []);
 
-  // Libère le micro et la peer connection quand l'utilisateur quitte la page
+
   useEffect(() => {
     return () => {
       if (pc.current) {
-        pc.current.onconnectionstatechange = null; // évite que le handler fire sur composant démonté
+        pc.current.onconnectionstatechange = null;
         pc.current.close();
         pc.current = null;
       }

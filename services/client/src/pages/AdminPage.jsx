@@ -17,7 +17,6 @@ export function AdminPage() {
   const [showCreate, setShowCreate] = useState(false);
   const [actionError, setActionError] = useState('');
 
-  // Formulaire création
   const [form, setForm] = useState({ name: '', email: '', password: '', role: 'USER' });
   const [formError, setFormError] = useState('');
   const [formSaving, setFormSaving] = useState(false);

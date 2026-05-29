@@ -61,7 +61,6 @@ router.get('/', requireAdmin, async (req, res) => {
 router.post('/', requireAdmin, async (req, res) => {
   const { email, name, password, role = 'USER' } = req.body;
 
-  // Seul un SUPERADMIN peut créer un compte SUPERADMIN
   if (role === 'SUPERADMIN' && req.user.role !== 'SUPERADMIN') {
     return res.status(403).json({ error: 'Accès refusé' });
   }
